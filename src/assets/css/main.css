@@ -1,0 +1,104 @@
+body{ 
+	margin: 0px 
+}
+
+#app {
+	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+	height: 100vh;
+	background:rgb(229, 229, 229, 0.15)
+
+}
+
+.welcome-text{
+	font-size: 24px;
+	color: #240F00;
+}
+.date{
+	margin-top: 10px;
+	font-size: 15px;
+	color: #737373;
+}
+
+.cards{
+	margin-top: 40px
+}
+
+.card-1{
+	position: relative;
+	/* width: 200px; */
+	height: 200px;
+	background-color: white;
+	border: 1px solid rgba(102, 102, 102, 0.06);
+	border-radius: 4px;
+	box-shadow: 1px 3px 1px -1px rgba(39, 39, 39, 0.06);
+	padding-left: 20px;
+	margin-right: 8px
+}
+
+.coloured-icon{
+	margin: 25px 0px 0px 0px
+}
+
+.card-number{
+	color: #4D0032;
+	font-size: 32px;
+	font-weight: 700;
+	margin: 16px 0px 6px
+}
+
+.card-text{
+	color: #240F00;
+	font-size: 15px;
+	position: absolute;
+	z-index: 100
+}
+
+.background-icon{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	z-index: 1
+}
+
+#last-card{
+	margin: 0px
+}
+
+#board{
+	margin-top: 40px;
+	height: auto;
+	background-color: #ffffff
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr{
+	border: 1px solid #dddddd;
+} 
+
+td, th{
+	text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.logo{
+	margin-left: 100px
+}
+.links-container{
+	width: 400px
+}
+.nav-links{
+	margin-left: 45px;
+	font-size: 15px;
+	color: #737373
+}
+#navbar{
+	padding: 17px 0px
+}
