@@ -12,7 +12,20 @@
     <!-- <noscript>
       <strong>We're sorry but this site doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript> -->
-    <div id="app"></div>
+    <div id="app">
+      <div id="navbar">
+        <img src="@/assets/images/logo.png" alt="logo" class="logo" >
+        <span class="nav-links"> <router-link to="/Dashboard">Dashboard</router-link> </span>
+        <span class="nav-links"> Buy Insurance </span>
+        <span class="nav-links"> Account Settings </span>
+      </div>
+      <div id="content">
+        <!-- <Dashboard></Dashboard> -->
+        <AccountSettings></AccountSettings>
+        <router-view></router-view>
+      </div>
+
+    </div>
     <!-- built files will be auto injected -->
   </body>
 </html>

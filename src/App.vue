@@ -2,27 +2,26 @@
   <div id="app">
     <div id="navbar">
       <img src="@/assets/images/logo.png" alt="logo" class="logo" >
-      <span class="nav-links"> Dashboard </span>
+      <span class="nav-links"> <router-link to="/">Dashboard</router-link> </span>
       <span class="nav-links"> Buy Insurance </span>
-      <span class="nav-links"> Account Settings </span>
+      <span class="nav-links"> <router-link to="/account_settings"> Account Settings</router-link> </span>
     </div>
     <div id="content">
       <!-- <Dashboard></Dashboard> -->
-      <AccountSettings></AccountSettings>
+     <!-- <AccountSettings></AccountSettings> -->
+      <router-view></router-view>
     </div>
   </div>
 </template>
 
 <script>
 
-import Dashboard from './components/Dashboard.vue'
-import AccountSettings from './components/AccountSettings.vue'
+// import Dashboard from './components/Dashboard.vue'
+// import AccountSettings from './components/AccountSettings.vue'
 
 export default {
   name: 'app',
-  components: {
-     Dashboard, AccountSettings
-  }
+ 
 }
 </script>
 

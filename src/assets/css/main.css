@@ -111,7 +111,8 @@ tr:nth-child(even) {
 .nav-links{
 	margin-left: 45px;
 	font-size: 15px;
-	color: #737373
+	color: #737373;
+	cursor: pointer
 }
 #navbar{
 	padding: 17px 0px
@@ -181,7 +182,7 @@ hr{
 	font-size: 13px;	
 	color: #4D0032;
 }
-.background-icon{
+.info-logo{
 	position: relative;
 	padding-right: 12px
 }
@@ -190,4 +191,44 @@ hr{
 	font-size: 15px;
 	color: #240F00;
 	margin: 15px 0px 13.5px
+}
+.avatar-section{
+	width: 600px
+}
+
+.upload-text{
+	text-decoration: underline;
+	color: #4C0032; 
+	font-size: 14px;
+	padding-top: 20px
+}
+.size-text{
+	font-size: 13px;
+	color: #666666;
+	
+}
+a{
+	color: #737373 !important;	
+}
+form{
+	margin-top:30px
+}
+
+label{
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #4C0032;
+}
+
+.save_button{
+	width: 220px;
+	height: 40px;
+	background: #F58634;
+	border-radius: 2px;
+	color:white;
+	font-size: 16px;
+}
+
+.spacing{
+	margin-top:30px
 }
