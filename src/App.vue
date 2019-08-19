@@ -7,7 +7,7 @@
       <span class="nav-links"> Account Settings </span>
     </div>
     <div id="content">
-      <Dashboard></Dashboard>
+      <!-- <Dashboard></Dashboard> -->
       <AccountSettings></AccountSettings>
     </div>
   </div>

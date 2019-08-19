@@ -67,27 +67,41 @@ body{
 #board{
 	margin-top: 40px;
 	height: auto;
-	background-color: #ffffff
+	background-color: #ffffff;
+	border:  1px solid #E5E5E5;
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
 }
 
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+	width: 100%;
+	font-size: 14px;
+}
+td{
+	color:  #240F00;
+	font-weight: 600;
+	
+}
+th{
+	color:  #737373;
+	font-weight: 400;
+	text-align: left
+}
+td, th{
+	
+	padding: 16px 0px;
+	
 }
 
 tr{
-	border: 1px solid #dddddd;
-} 
-
-td, th{
-	text-align: left;
-  padding: 8px;
+	padding: 0px 10px
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+tr:nth-child(even) {  
+	background: #F8F7F6;
 }
+
 .logo{
 	margin-left: 100px
 }
@@ -101,4 +115,79 @@ tr:nth-child(even) {
 }
 #navbar{
 	padding: 17px 0px
+}
+.complete{
+	background: rgba(106, 221, 14, 0.2);
+	border-radius: 2px;
+	width: 106px;
+	height: 24px;
+	padding: 2px 9px;
+	font-size: 12px;
+	color: #6ADD0E;
+}
+.incomplete{
+	background: rgba(253, 82, 98, 0.2);
+	border-radius: 2px;
+	width: 106px;
+	height: 24px;
+	padding: 2px 9px;
+	font-size: 12px;
+	color:  #FD5262;
+}
+.eclipse{
+	background:  #6ADD0E;
+	border-radius: 50%
+}
+
+.dot{
+	padding-right: 6px
+}
+.action-button{
+	width: 136px;
+	height: 30px;
+	background: #F58634;
+	border-radius: 2px;
+	color:white;
+	font-size: 12px;
+	text-align: center;
+	padding-top: 5px;
+}
+.action-link{
+	text-decoration-line: underline;	
+	color: #4D0032;
+	font-size: 12px;
+}
+.offset{
+	padding-left: 20px
+}
+.board-title{
+	font-size: 18px;
+	color: #4D0032;
+	padding: 22px 20px
+}
+hr{
+	margin: 0px 20px
+}
+
+.top-container{
+	border: 1px solid #E5E5E5;
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+	margin-top: 40px;
+	padding: 20px 32px;
+	background-color: white;
+
+}
+.account-header-1{
+	font-size: 13px;	
+	color: #4D0032;
+}
+.background-icon{
+	position: relative;
+	padding-right: 12px
+}
+
+.page-info{
+	font-size: 15px;
+	color: #240F00;
+	margin: 15px 0px 13.5px
 }

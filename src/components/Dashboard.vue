@@ -9,7 +9,7 @@
             <img src="@/assets/images/insurance_bought_icon.svg" alt="insurance-bought-icon" class="coloured-icon">
             <div class="card-number">06</div>
             <div class="card-text">Total Insurance Bought</div>
-            <img src="@/assets/images/insurance_shield.png" alt="isurance-shielst-icon" class="background-icon">
+            <img src="@/assets/images/insurance_shield.png" alt="insurance-shield-icon" class="background-icon">
           </div>
         </div>        
        <div class="col-3">
@@ -39,22 +39,28 @@
       </div> 
     </div>
     <div id="board">
+    <div class="board-title offset">Insurance Applications</div>
+    <hr>
       <table>
         <tr>
-          <th>S.N</th>
+          <th class="offset">S.N</th>
           <th>Insurance Type</th>
           <th>Amount</th>
           <th>Date</th>
           <th>Status</th>
           <th>Action</th>
+          <th> </th>
         </tr>
         <tr v-for="(application, index) in applications" :key="index" >
-          <td >{{index + 1}}</td>
+          <td class="offset">{{index + 1}}</td>
           <td>{{application.insuranceType}}</td>
           <td>{{application.amount}}</td>
           <td>{{day}} {{months[month]}} {{year}} </td>
-          <td>Status</td>
-          <td>Action</td>
+          <td v-if="application.complete"><div class="complete"><img src="@/assets/images/green-eclipse.png" alt="dot" class="dot">Completed</div></td>
+          <td v-else><div class="incomplete"><img src="@/assets/images/red-eclipse.png" alt="dot" class="dot">Incomplete</div></td>
+          <td><div class="action-button">Make a Claim</div></td>
+          <td><div class="action-link">More Actions</div></td>
+          
         </tr>
       </table>
     </div>
@@ -71,8 +77,8 @@ export default {
       date:'',
       year:'',
       month:'',
-      day:'',
-      complete: ''
+      day:''
+      
 
   }},
   created () {
