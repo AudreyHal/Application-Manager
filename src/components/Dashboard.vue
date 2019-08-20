@@ -115,8 +115,7 @@ export default {
       this.day= new Date("2019-08-08T16:28:27.446Z").getDay()      
       )) ;
     axios.get(statistics_url, config  )
-    .then(response => (      
-      console.log(response.data.statistics),
+    .then(response => (            
       this.$store.commit('change_totalClaimsAmount', response.data.statistics.totalClaimsAmount),
       this.$store.commit('change_totalInsuranceAmount', response.data.statistics.totalInsuranceAmount),
       this.$store.commit('change_totalInsurancesBought', response.data.statistics.totalInsurancesBought),

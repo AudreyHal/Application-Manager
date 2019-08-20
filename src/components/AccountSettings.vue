@@ -37,16 +37,16 @@
         <button type="submit" class="btn save_button">Save Changes</button>
         <div class="row spacing">          
           <div class="form-group col-3">
-            <label for="username">CURRENT PASSWORD</label>
-            <input type="text" class="form-control" id="username"  placeholder="Madjozi" >    
+            <label for="current_password">CURRENT PASSWORD</label>
+            <input type="text" class="form-control" id="current_password"  placeholder="Madjozi" >    
           </div>
           <div class="form-group col-3">
-            <label for="birthdate">NEW PASSWORD</label>
-            <input type="date" class="form-control" id="birthdate"  placeholder="07/15/1990" disabled>    
+            <label for="new_password">NEW PASSWORD</label>
+            <input type="password" class="form-control" id="new_password"  placeholder="" disabled>    
           </div>
           <div class="form-group col-3">
-            <label for="fullname">CONFIRM PASSWORD</label>
-            <input type="text" class="form-control" id="fullname"  placeholder="Olatunji Joseph" >    
+            <label for="confirm_password">CONFIRM PASSWORD</label>
+            <input type="password" class="form-control" id="confirm_password"  placeholder="Olatunji Joseph" >    
           </div>
         </div>      
         <button type="submit" class="btn save_button" id="save">Save Changes</button>
@@ -69,23 +69,23 @@
             <input type="text" class="form-control" id="fullname"  placeholder="" >    
           </div>
           <div class="form-group col-3">
-            <label for="username">WHAT LGA DO LIVE IN</label>
-            <input type="text" class="form-control" id="username"  placeholder="" >    
+            <label for="lga">WHAT LGA DO LIVE IN</label>
+            <input type="text" class="form-control" id="lga"  placeholder="" >    
           </div>
           <div class="form-group col-3">
-            <label for="birthdate">FEDERAL CONSTITUENCIES </label>
-            <input type="date" class="form-control" id="birthdate"  placeholder="" >    
+            <label for="federal">FEDERAL CONSTITUENCIES </label>
+            <input type="text" class="form-control" placeholder="" >    
           </div>
         </div>      
         <button type="submit" class="btn save_button">Save Changes</button>
         <div class="row spacing">          
           <div class="form-group col-3">
-            <label for="username">SENATORIAL DISTRICT</label>
-            <input type="text" class="form-control" id="username"  placeholder="" >    
+            <label for="senate">SENATORIAL DISTRICT</label>
+            <input type="text" class="form-control" id="senate"  placeholder="" >    
           </div>
           <div class="form-group col-3">
-            <label for="birthdate">STATE CONSTITUENCIES</label>
-            <input type="date" class="form-control" id="birthdate"  placeholder="07/15/1990" disabled>    
+            <label for="state">STATE CONSTITUENCIES</label>
+            <input type="text" class="form-control"   placeholder="" >    
           </div>
         </div>      
         <button type="submit" class="btn save_button">Save Changes</button>
