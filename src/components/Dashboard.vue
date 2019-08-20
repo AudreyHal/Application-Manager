@@ -7,33 +7,33 @@
         <div class="col-3">
           <div class="card-1">
             <img src="@/assets/images/insurance_bought_icon.svg" alt="insurance-bought-icon" class="coloured-icon">
-            <div class="card-number">06</div>
+            <div class="card-number">{{totalInsurancesBought}}</div>
             <div class="card-text">Total Insurance Bought</div>
             <img src="@/assets/images/insurance_shield.png" alt="insurance-shield-icon" class="background-icon">
           </div>
         </div>        
        <div class="col-3">
           <div class="card-1">
-            <img src="@/assets/images/insurance_bought_icon.svg" alt="insurance-bought-icon" class="coloured-icon">
-            <div class="card-number">06</div>
-            <div class="card-text">Total Insurance Bought</div>
-            <img src="@/assets/images/insurance_shield.png" alt="isurance-shielst-icon" class="background-icon">
+            <img src="@/assets/images/total_amount_insurance_icon.svg" alt="insurance-bought-icon" class="coloured-icon">
+            <div class="card-number">{{totalInsuranceAmount}}</div>
+            <div class="card-text">Total Amount of Insurance</div>
+            <img src="@/assets/images/total_amount.png" alt="isurance-shielst-icon" class="background-icon">
           </div>
         </div> 
         <div class="col-3">
           <div class="card-1">
-            <img src="@/assets/images/insurance_bought_icon.svg" alt="insurance-bought-icon" class="coloured-icon">
-            <div class="card-number">06</div>
-            <div class="card-text">Total Insurance Bought</div>
-            <img src="@/assets/images/insurance_shield.png" alt="isurance-shielst-icon" class="background-icon">
+            <img src="@/assets/images/insurance_claim_icon.svg" alt="insurance-bought-icon" class="coloured-icon">
+            <div class="card-number">{{totalInsuranceClaims}}</div>
+            <div class="card-text">Total Insurance Claim</div>
+            <img src="@/assets/images/insurance_claim.png" alt="isurance-shielst-icon" class="background-icon">
           </div>
         </div> 
         <div class="col-3">
           <div class="card-1" id="last-card">
-            <img src="@/assets/images/insurance_bought_icon.svg" alt="insurance-bought-icon" class="coloured-icon">
-            <div class="card-number">06</div>
-            <div class="card-text">Total Insurance Bought</div>
-            <img src="@/assets/images/insurance_shield.png" alt="isurance-shielst-icon" class="background-icon">
+            <img src="@/assets/images/amount_of_claims.svg" alt="insurance-bought-icon" class="coloured-icon">
+            <div class="card-number">{{totalClaimsAmount}}</div>
+            <div class="card-text">Total Amounts of Claims</div>
+            <img src="@/assets/images/amount_of_claims.png" alt="isurance-shielst-icon" class="background-icon">
           </div>
         </div> 
       </div> 
@@ -68,11 +68,11 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'Dashboard',
   data () {
-    return {
-      applications: [],
+    return {      
       months:["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"],
       date:'',
       year:'',
@@ -81,20 +81,38 @@ export default {
       
 
   }},
+  computed: {
+    ...mapGetters([
+      'applications',     
+      'totalClaimsAmount',
+			'totalInsuranceAmount',
+			'totalInsurancesBought',
+			'totalInsuranceClaims'
+
+    ])},
+
   created () {
-    var url='http://test.natterbase.com:5050/api/interview/get-applications';
+    var applications_url='http://test.natterbase.com:5050/api/interview/get-applications';
+    var statistics_url = 'http://test.natterbase.com:5050/api/interview/get-statistics';
     var axios = require('axios');
     var key= "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjYjg2NWZmMzFhZWRkMzQxNDU0OTQ2YiIsImlhdCI6MTU2NTk0Nzg1NCwiZXhwIjoxNTY1OTU1MDU0fQ.5ujc_dMloqYdyoQN556PhGwIqa1OfGwt06vD5iKu-lg"
     var config={ headers: { 'token': key } }
-    axios.get(url, config  )
+    axios.get(applications_url, config  )
     .then(response => (
-      console.log(response.data.applications), 
-      this.applications = response.data.applications, 
+      this.$store.commit('change_applications', response.data.applications),
       this.date=response.data.applications.createdDate, 
       this.year= new Date("2019-08-08T16:28:27.446Z").getFullYear(),
       this.month= new Date("2019-08-08T16:28:27.446Z").getMonth(),
-      this.day= new Date("2019-08-08T16:28:27.446Z").getDay(),   
-      console.log(this.day)
+      this.day= new Date("2019-08-08T16:28:27.446Z").getDay()      
+      )) ;
+    axios.get(statistics_url, config  )
+    .then(response => (      
+      console.log(response.data.statistics),
+      this.$store.commit('change_totalClaimsAmount', response.data.statistics.totalClaimsAmount),
+      this.$store.commit('change_totalInsuranceAmount', response.data.statistics.totalInsuranceAmount),
+      this.$store.commit('change_totalInsurancesBought', response.data.statistics.totalInsurancesBought),
+      this.$store.commit('change_totalInsuranceClaims', response.data.statistics.totalInsuranceClaims)
+      
       )) ;
     
   }  

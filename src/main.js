@@ -3,6 +3,8 @@ import App from './App.vue'
 import './assets/css/main.css'
 import  routes from './assets/js/routes.js'
 import VueRouter from 'vue-router'
+import  store  from './assets/js/store/store.js'
+import { mapGetters } from 'vuex'
 
 Vue.use(VueRouter)
 
@@ -14,5 +16,6 @@ const router = new VueRouter({routes: routes, mode:'history'});
 
 new Vue({
   render: h => h(App),
-  router: router
+  router: router,
+  store: store
 }).$mount('#app')
