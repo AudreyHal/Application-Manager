@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="../src/assets/css/main.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Application Management System</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <title>Application Portal</title>
   </head>
   <body>
-    <!-- <noscript>
+    <noscript>
       <strong>We're sorry but this site doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript> -->
+    </noscript>
     <div id="app">
       <div id="navbar">
         <img src="@/assets/images/logo.png" alt="logo" class="logo" >
@@ -19,13 +20,9 @@
         <span class="nav-links"> Buy Insurance </span>
         <span class="nav-links"> Account Settings </span>
       </div>
-      <div id="content">
-        <!-- <Dashboard></Dashboard> -->
-        <AccountSettings></AccountSettings>
+      <div id="content">         
         <router-view></router-view>
       </div>
-
-    </div>
-    <!-- built files will be auto injected -->
+    </div>    
   </body>
 </html>

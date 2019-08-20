@@ -40,7 +40,7 @@
     </div>
     <div id="board">
     <div class="board-title offset">Insurance Applications</div>
-    <hr>
+    <hr class="divider">
       <table>
         <tr>
           <th class="offset">S.N</th>
@@ -59,9 +59,17 @@
           <td v-if="application.complete"><div class="complete"><img src="@/assets/images/green-eclipse.png" alt="dot" class="dot">Completed</div></td>
           <td v-else><div class="incomplete"><img src="@/assets/images/red-eclipse.png" alt="dot" class="dot">Incomplete</div></td>
           <td><div class="action-button">Make a Claim</div></td>
-          <td><div class="action-link">More Actions</div></td>
+          <td class="action-row"><div class="action-link"  @click="show = index">More Actions</div>
+          <div class="menu" v-show="show === index" >
+            <div class="menu-item">Make a claim</div>
+            <hr class="divider-2">
+            <div class="menu-item">View Policy</div>
+        </div> 
           
+          </td> 
+                  
         </tr>
+        
       </table>
     </div>
   </div>
@@ -72,7 +80,8 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'Dashboard',
   data () {
-    return {      
+    return {   
+      show: false,   
       months:["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"],
       date:'',
       year:'',
@@ -111,10 +120,8 @@ export default {
       this.$store.commit('change_totalClaimsAmount', response.data.statistics.totalClaimsAmount),
       this.$store.commit('change_totalInsuranceAmount', response.data.statistics.totalInsuranceAmount),
       this.$store.commit('change_totalInsurancesBought', response.data.statistics.totalInsurancesBought),
-      this.$store.commit('change_totalInsuranceClaims', response.data.statistics.totalInsuranceClaims)
-      
-      )) ;
-    
+      this.$store.commit('change_totalInsuranceClaims', response.data.statistics.totalInsuranceClaims)      
+      )) ;   
   }  
 }
 </script>

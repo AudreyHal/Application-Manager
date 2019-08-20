@@ -11,12 +11,9 @@
         <div class="col-3">  
            <img src="@/assets/images/Profile.png" alt="profile" class="profile">
         </div>
-      </div>
-     
+      </div>     
     </div>
-    <div id="content">
-      <!-- <Dashboard></Dashboard> -->
-     <!-- <AccountSettings></AccountSettings> -->
+    <div id="content">     
       <router-view></router-view>
     </div>
   </div>
@@ -24,25 +21,10 @@
 
 <script>
 
-// import Dashboard from './components/Dashboard.vue'
-// import AccountSettings from './components/AccountSettings.vue'
-
 export default {
   name: 'app',
  
 }
 </script>
 
-<style>
-
-#navbar{
-width: 100%;
-height: 80px;
-background: #FFFFFF;
-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06);
-  
-}
-#content{
-  
-}
-</style>
+<style></style>

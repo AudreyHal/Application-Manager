@@ -1,18 +1,24 @@
 body{ 
-	margin: 0px 
+	margin: 0px ;
+	font-family: 'Nunito', sans-serif;
 }
 
 #app {
 	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	height: 100vh;
 	background:rgb(229, 229, 229, 0.15)
-
 }
+
+#navbar{
+	width: 100%;
+	height: 80px;
+	background: #FFFFFF;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06);		
+	}
 
 .welcome-text{
 	font-size: 24px;
-	color: #240F00;
-	
+	color: #240F00;	
 }
 
 .welcome-text-2{
@@ -20,6 +26,7 @@ body{
 	color: #240F00;
 	padding-top: 40px
 }
+
 .date{
 	margin-top: 10px;
 	font-size: 15px;
@@ -35,8 +42,7 @@ body{
 }
 
 .card-1{
-	position: relative;
-	/* width: 200px; */
+	position: relative;		
 	height: 200px;
 	background-color: white;
 	border: 1px solid rgba(102, 102, 102, 0.06);
@@ -99,10 +105,8 @@ th{
 	font-weight: 400;
 	text-align: left
 }
-td, th{
-	
-	padding: 16px 0px;
-	
+td, th{	
+	padding: 16px 0px;	
 }
 
 tr{
@@ -116,33 +120,38 @@ tr:nth-child(even) {
 .logo{
 	margin-left: 100px
 }
+
 .links-container{
 	width: 400px
 }
+
 .nav-links{
 	margin-left: 45px;
 	font-size: 15px;
 	color: #737373;
 	cursor: pointer
 }
+
 #navbar{
 	padding: 17px 0px
 }
+
 .complete{
 	background: rgba(106, 221, 14, 0.2);
 	border-radius: 2px;
 	width: 106px;
 	height: 24px;
-	padding: 2px 9px;
+	padding: 3px 9px;
 	font-size: 12px;
 	color: #6ADD0E;
 }
+
 .incomplete{
 	background: rgba(253, 82, 98, 0.2);
 	border-radius: 2px;
 	width: 106px;
 	height: 24px;
-	padding: 2px 9px;
+	padding: 3px 9px;
 	font-size: 12px;
 	color:  #FD5262;
 }
@@ -154,6 +163,7 @@ tr:nth-child(even) {
 .dot{
 	padding-right: 6px
 }
+
 .action-button{
 	width: 136px;
 	height: 30px;
@@ -163,21 +173,31 @@ tr:nth-child(even) {
 	font-size: 12px;
 	text-align: center;
 	padding-top: 5px;
+	cursor: pointer;
 }
+
 .action-link{
 	text-decoration-line: underline;	
 	color: #4D0032;
 	font-size: 12px;
+	cursor: pointer
 }
+
+.action-row{
+	position: relative;
+}
+
 .offset{
 	padding-left: 20px
 }
+
 .board-title{
 	font-size: 18px;
 	color: #4D0032;
 	padding: 22px 20px
 }
-hr{
+
+.divider{
 	margin: 0px 20px
 }
 
@@ -187,12 +207,13 @@ hr{
 	margin-top: 40px;
 	padding: 20px 32px;
 	background-color: white;
-
 }
+
 .account-header-1{
 	font-size: 13px;	
 	color: #4D0032;
 }
+
 .info-logo{
 	position: relative;
 	padding-right: 12px
@@ -203,6 +224,7 @@ hr{
 	color: #240F00;
 	margin: 15px 0px 13.5px
 }
+
 .avatar-section{
 	width: 600px
 }
@@ -213,14 +235,16 @@ hr{
 	font-size: 14px;
 	padding-top: 20px
 }
+
 .size-text{
 	font-size: 13px;
-	color: #666666;
-	
+	color: #666666;	
 }
+
 a{
 	color: #737373 !important;	
 }
+
 form{
 	margin-top:30px
 }
@@ -244,6 +268,7 @@ label{
 .spacing{
 	margin-top:30px
 }
+
 .AccountSettings{
 	padding: 0px 100px;
 	background-image: url('../images/background.png');
@@ -257,6 +282,39 @@ label{
 #save{
 	margin-bottom: 10px
 }
+
 .profile{
 	text-align: right
+}
+
+.menu{
+	padding: 8px;
+	position: absolute;
+	top:20px;
+	left:40px;
+	z-index: 100;
+	width: 140px;	
+	font-weight: 400;
+	font-size: 14px;
+	background-color: #ffffff;
+	border: 1px solid #E5E5E5;
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.menu-item{
+	padding: 7px 0px;
+	color:  #4D0032;
+}
+
+.divider-2{
+	margin: 0px 0px 0px 3px
+}
+
+.complete, .incomplete{
+	font-weight: 300 !important
+}
+
+.form-control{
+	height: calc(1.0em + .75rem + 1px) !important;
+	font-size: 12px !important
 }

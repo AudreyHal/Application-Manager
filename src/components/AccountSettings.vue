@@ -60,28 +60,28 @@
         <div class="row">
           <div class="form-group col-3">
             <label for="email">CURRENT STATE</label>
-            <input type="email" class="form-control" id="email"  placeholder="amarachukwu.gmail.com" disabled>    
+            <input type="email" class="form-control" id="email"  placeholder="Niger" disabled>    
           </div>
         </div>
         <div class="row">
           <div class="form-group col-3">
             <label for="fullname">NEW STATE OF RESIDENCE</label>
-            <input type="text" class="form-control" id="fullname"  placeholder="Olatunji Joseph" >    
+            <input type="text" class="form-control" id="fullname"  placeholder="" >    
           </div>
           <div class="form-group col-3">
             <label for="username">WHAT LGA DO LIVE IN</label>
-            <input type="text" class="form-control" id="username"  placeholder="Madjozi" >    
+            <input type="text" class="form-control" id="username"  placeholder="" >    
           </div>
           <div class="form-group col-3">
             <label for="birthdate">FEDERAL CONSTITUENCIES </label>
-            <input type="date" class="form-control" id="birthdate"  placeholder="07/15/1990" disabled>    
+            <input type="date" class="form-control" id="birthdate"  placeholder="" >    
           </div>
         </div>      
         <button type="submit" class="btn save_button">Save Changes</button>
         <div class="row spacing">          
           <div class="form-group col-3">
             <label for="username">SENATORIAL DISTRICT</label>
-            <input type="text" class="form-control" id="username"  placeholder="Madjozi" >    
+            <input type="text" class="form-control" id="username"  placeholder="" >    
           </div>
           <div class="form-group col-3">
             <label for="birthdate">STATE CONSTITUENCIES</label>

@@ -9,8 +9,6 @@ import { mapGetters } from 'vuex'
 Vue.use(VueRouter)
 
 Vue.config.productionTip = false
-// import routes from './routes';
-
 
 const router = new VueRouter({routes: routes, mode:'history'});
 

@@ -1,4 +1,4 @@
-# insurance
+# Application Portal
 
 ## Project setup
 ```
