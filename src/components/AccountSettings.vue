@@ -46,7 +46,7 @@
           </div>
           <div class="form-group col-3">
             <label for="confirm_password">CONFIRM PASSWORD</label>
-            <input type="password" class="form-control" id="confirm_password"  placeholder="Olatunji Joseph" >    
+            <input type="password" class="form-control" id="confirm_password"  placeholder="" >    
           </div>
         </div>      
         <button type="submit" class="btn save_button" id="save">Save Changes</button>
