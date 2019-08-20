@@ -38,11 +38,11 @@
         <div class="row spacing">          
           <div class="form-group col-3">
             <label for="current_password">CURRENT PASSWORD</label>
-            <input type="text" class="form-control" id="current_password"  placeholder="Madjozi" >    
+            <input type="text" class="form-control" id="current_password"  placeholder="" >    
           </div>
           <div class="form-group col-3">
             <label for="new_password">NEW PASSWORD</label>
-            <input type="password" class="form-control" id="new_password"  placeholder="" disabled>    
+            <input type="password" class="form-control" id="new_password"  placeholder="" >    
           </div>
           <div class="form-group col-3">
             <label for="confirm_password">CONFIRM PASSWORD</label>
